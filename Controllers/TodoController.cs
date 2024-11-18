@@ -14,7 +14,7 @@ namespace TodoAPI.Controllers
             _todoServices = todoServices;
         }
 
-        [HttpPost("/api/v1/create")]
+        [HttpPost("/api/v2/todo/create")]
         public async Task<IActionResult> CreateTodoAsync(CreateTodoRequest request)
         {
             if (!ModelState.IsValid) 
@@ -31,7 +31,7 @@ namespace TodoAPI.Controllers
             }
         }
 
-        [HttpGet("/api/v1/get")]
+        [HttpGet("/api/v2/todo/get")]
         public async Task<IActionResult> GetAllAsync()
         {
             try{
@@ -46,7 +46,7 @@ namespace TodoAPI.Controllers
             }
         }
 
-        [HttpGet("/api/v1/getbyid/{id}")]
+        [HttpGet("/api/v2/todo/getbyid/{id}")]
         public async Task<IActionResult> GetByIdAsync(Guid id)
         {
             try
@@ -64,7 +64,7 @@ namespace TodoAPI.Controllers
             }
         }
 
-        [HttpPut("/api/v1/update/{id}")]
+        [HttpPut("/api/v2/todo/update/{id}")]
         public async Task<IActionResult> UpdateTodoAsync(Guid id, UpdateTodoRequest request)
         {
             if (!ModelState.IsValid)
@@ -88,7 +88,7 @@ namespace TodoAPI.Controllers
             }
         }
 
-        [HttpDelete("/api/v1/delete/{id}")]
+        [HttpDelete("/api/v2/todo/delete/{id}")]
         public async Task<IActionResult> DeleteTodoAsync(Guid id)
         {
             try
