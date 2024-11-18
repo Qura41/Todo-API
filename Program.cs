@@ -26,6 +26,14 @@ builder.Services.AddLogging();
 
 builder.Services.AddScoped<ITodoServices, TodoServices>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalApp",
+        builder => builder.AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials());
+});
+
 var app = builder.Build();
 
 {
@@ -43,6 +51,8 @@ app.UseHttpsRedirection();
 
 app.UseExceptionHandler();
 app.UseAuthorization();
+
+app.UseCors("AllowLocalApp");
 
 app.MapControllers();
 

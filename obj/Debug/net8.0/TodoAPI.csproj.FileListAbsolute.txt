@@ -136,3 +136,4 @@ C:\Users\Yollor\TodoAPI\obj\Debug\net8.0\refint\TodoAPI.dll
 C:\Users\Yollor\TodoAPI\obj\Debug\net8.0\TodoAPI.pdb
 C:\Users\Yollor\TodoAPI\obj\Debug\net8.0\TodoAPI.genruntimeconfig.cache
 C:\Users\Yollor\TodoAPI\obj\Debug\net8.0\ref\TodoAPI.dll
+C:\Users\Yollor\TodoAPI\obj\Debug\net8.0\TodoAPI.sourcelink.json
